@@ -4,9 +4,16 @@ export default function Home() {
       {/* Navigation */}
       <header className="border-b border-white/10">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
-          <div className="text-2xl font-bold tracking-tight">
-            Air<span className="text-blue-500">A</span>
-          </div>
+          <a
+            href="/"
+            className="group flex items-center gap-2"
+            aria-label="Aira home"
+          >
+            <span className="text-2xl font-bold tracking-tight">
+              Air<span className="text-blue-500">a</span>
+            </span>
+            <span className="h-1.5 w-1.5 rounded-full bg-blue-500 transition-transform group-hover:scale-125" />
+          </a>
 
           <nav className="hidden gap-8 text-sm text-white/70 md:flex">
             <a href="#about" className="transition hover:text-white">
