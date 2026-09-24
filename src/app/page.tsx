@@ -1,69 +1,198 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <main className="min-h-screen bg-black text-white">
+      {/* Navigation */}
+      <header className="border-b border-white/10">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
+          <div className="text-2xl font-bold tracking-tight">
+            Air<span className="text-blue-500">A</span>
+          </div>
+
+          <nav className="hidden gap-8 text-sm text-white/70 md:flex">
+            <a href="#about" className="transition hover:text-white">
+              About
+            </a>
+            <a href="#technology" className="transition hover:text-white">
+              Technology
+            </a>
+            <a href="#projects" className="transition hover:text-white">
+              Projects
+            </a>
+            <a href="#contact" className="transition hover:text-white">
+              Contact
+            </a>
+          </nav>
+
+          <a
+            href="#contact"
+            className="rounded-full border border-white/20 px-4 py-2 text-sm transition hover:bg-white hover:text-black"
+          >
+            Connect
+          </a>
+        </div>
+      </header>
+
+      {/* Hero */}
+      <section className="relative overflow-hidden">
+        <div className="absolute left-1/2 top-20 h-96 w-96 -translate-x-1/2 rounded-full bg-blue-600/20 blur-3xl" />
+
+        <div className="relative mx-auto flex min-h-[75vh] max-w-7xl items-center px-6 py-24">
+          <div className="max-w-4xl">
+            <p className="mb-6 text-sm font-medium uppercase tracking-[0.35em] text-blue-400">
+              Aira Technologies
+            </p>
+
+            <h1 className="text-5xl font-bold leading-tight tracking-tight sm:text-7xl lg:text-8xl">
+              Building
+              <br />
+              <span className="text-white/40">intelligent</span>
+              <br />
+              technology.
+            </h1>
+
+            <p className="mt-8 max-w-2xl text-lg leading-8 text-white/60">
+              Aira is building a new generation of intelligent technology
+              across AI, operating systems, software and hardware.
+            </p>
+
+            <div className="mt-10 flex flex-wrap gap-4">
+              <a
+                href="#projects"
+                className="rounded-full bg-white px-6 py-3 font-medium text-black transition hover:bg-blue-500 hover:text-white"
+              >
+                Explore Aira
+              </a>
+
+              <a
+                href="#about"
+                className="rounded-full border border-white/20 px-6 py-3 font-medium transition hover:border-white/50"
+              >
+                Our Vision
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* About */}
+      <section id="about" className="border-t border-white/10">
+        <div className="mx-auto max-w-7xl px-6 py-24">
+          <p className="text-sm uppercase tracking-[0.3em] text-blue-400">
+            About Aira
+          </p>
+
+          <h2 className="mt-5 max-w-4xl text-4xl font-semibold leading-tight sm:text-5xl">
+            Technology should understand people.
+          </h2>
+
+          <p className="mt-8 max-w-3xl text-lg leading-8 text-white/60">
+            We are exploring how artificial intelligence can make technology
+            more natural, useful and accessible through intelligent software,
+            operating systems and connected devices.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* Technology */}
+      <section id="technology" className="border-t border-white/10">
+        <div className="mx-auto max-w-7xl px-6 py-24">
+          <p className="text-sm uppercase tracking-[0.3em] text-blue-400">
+            Technology
+          </p>
+
+          <div className="mt-12 grid gap-6 md:grid-cols-2">
+            <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-8">
+              <span className="text-sm text-blue-400">01</span>
+              <h3 className="mt-5 text-2xl font-semibold">Artificial AI</h3>
+              <p className="mt-4 leading-7 text-white/50">
+                Intelligent systems designed to understand natural human
+                commands and interactions.
+              </p>
+            </div>
+
+            <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-8">
+              <span className="text-sm text-blue-400">02</span>
+              <h3 className="mt-5 text-2xl font-semibold">
+                Operating Systems
+              </h3>
+              <p className="mt-4 leading-7 text-white/50">
+                Building Aira OS as an intelligent platform for next-generation
+                devices.
+              </p>
+            </div>
+
+            <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-8">
+              <span className="text-sm text-blue-400">03</span>
+              <h3 className="mt-5 text-2xl font-semibold">Software</h3>
+              <p className="mt-4 leading-7 text-white/50">
+                Creating software experiences where people can interact with
+                technology naturally.
+              </p>
+            </div>
+
+            <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-8">
+              <span className="text-sm text-blue-400">04</span>
+              <h3 className="mt-5 text-2xl font-semibold">Hardware</h3>
+              <p className="mt-4 leading-7 text-white/50">
+                Exploring intelligent hardware and devices designed around
+                AI-first experiences.
+              </p>
+            </div>
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* Projects */}
+      <section id="projects" className="border-t border-white/10">
+        <div className="mx-auto max-w-7xl px-6 py-24">
+          <p className="text-sm uppercase tracking-[0.3em] text-blue-400">
+            Projects
+          </p>
+
+          <div className="mt-8 rounded-3xl border border-blue-500/20 bg-blue-500/[0.05] p-8 sm:p-12">
+            <p className="text-sm text-blue-400">AIRA OS</p>
+
+            <h2 className="mt-4 text-4xl font-semibold sm:text-5xl">
+              An intelligent operating system.
+            </h2>
+
+            <p className="mt-6 max-w-2xl leading-8 text-white/60">
+              Aira OS is our ongoing exploration into an AI-controlled,
+              command-driven operating system for next-generation devices.
+            </p>
+
+            <button className="mt-8 rounded-full border border-white/20 px-6 py-3 transition hover:bg-white hover:text-black">
+              Coming Soon
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact */}
+      <section id="contact" className="border-t border-white/10">
+        <div className="mx-auto max-w-7xl px-6 py-24">
+          <p className="text-sm uppercase tracking-[0.3em] text-blue-400">
+            Contact
+          </p>
+
+          <h2 className="mt-5 text-4xl font-semibold sm:text-5xl">
+            Let&apos;s build the future.
+          </h2>
+
+          <p className="mt-6 text-white/50">
+            More information about Aira and our projects will be available
+            soon.
+          </p>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="border-t border-white/10">
+        <div className="mx-auto flex max-w-7xl flex-col gap-3 px-6 py-8 text-sm text-white/40 sm:flex-row sm:items-center sm:justify-between">
+          <p>© 2026 Aira Technologies. All rights reserved.</p>
+          <p>Building intelligent technology.</p>
+        </div>
+      </footer>
+    </main>
   );
 }
